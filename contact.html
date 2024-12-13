@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!--  *****   Link To Font Awsome Icons   *****  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ---------------nav bar -------------------- -->
+
+    <header class="header">
+      <!-- Left Section -->
+      <div class="header__left">
+        <a href="#" class="header__logo">
+          <img
+            src="images/logo.png"
+            alt="Company Logo"
+            class="header__logo-img"
+          />
+          <span class="header__logo-name">Sharp Enterprises</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
+
+      <!-- Navigation Menu -->
+      <nav class="nav" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Clients</a></li>
+        </ul>
+        <!-- Contact Button for Sidebar -->
+        <a href="#" class="nav__link nav__contact">Contact</a>
+      </nav>
+
+      <!-- Right Section Contact Button -->
+      <div class="header__right">
+        <a href="contact.html" class="btn">Contact</a>
+      </div>
+    </header>
+    <!--   *** Contact Section Starts ***   -->
+    <section class="contact" id="contact">
+      <!--   === contact Header Starts ===   -->
+      <header class="section-heading">
+        <h1>Contact</h1>
+      </header>
+      <!--   === contact Header Ends ===   -->
+      <!--   === Contact Contents Starts ===   -->
+      <div class="contact-contents">
+        <!--   === Contact Column 1 Starts ===   -->
+        <div class="contact-col contact-col-1">
+          <h1>Get In Touch</h1>
+          <form class="contact-form">
+            <div class="input-element name-input">
+              <input type="text" required="required" placeholder="Your Name" />
+            </div>
+
+            <div class="input-element email-input">
+              <input
+                type="email"
+                required="required"
+                placeholder="Your Email"
+              />
+            </div>
+
+            <div class="text-area">
+              <textarea
+                required="required"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            <div class="form-button-container">
+              <button type="submit" class="btn form-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+        <!--   === Contact Column 1 Ends ===   -->
+        <!--   === Contact Column 2 Starts ===   -->
+        <div class="contact-col contact-col-2">
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-text">
+              <span>My Address</span>
+              <span>#488, AB Street, San Francisco</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <span>Phone Number</span>
+              <span>+93 0034 9422</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <span>Email Address</span>
+              <span>xyz@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-social-media">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!--   === Contact Column 2 Ends ===   -->
+      </div>
+      <!--   === Contact Contents Ends ===   -->
+    </section>
+    <!--   *** Contact Section Ends ***   -->
+
+    <!-- -----------------------------footer----------------------------- -->
+    <footer>
+      <div class="footer_container">
+        <div class="row">
+          <div class="col" id="company">
+            <img src="images/logo.png" alt="" class="logo" />
+            <p>
+              We are specialized in designings, make your business a brand. Try
+              our premium services.
+            </p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col" id="services">
+            <h3>Services</h3>
+            <div class="links">
+              <a href="#">Illustration</a>
+              <a href="#">Creatives</a>
+              <a href="#">Poster Design</a>
+              <a href="#">Card Design</a>
+            </div>
+          </div>
+
+          <div class="col" id="useful-links">
+            <h3>Links</h3>
+            <div class="links">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Our Policy</a>
+              <a href="#">Help</a>
+            </div>
+          </div>
+
+          <div class="col" id="contact">
+            <h3>Contact</h3>
+            <div class="contact-details">
+              <i class="fa fa-location"></i>
+              <p>
+                FF-42, Procube Avenue, <br />
+                NY, USA
+              </p>
+            </div>
+            <div class="contact-details">
+              <i class="fa fa-phone"></i>
+              <p>+1-8755856858</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form">
+            <form action="">
+              <input type="text" placeholder="Email here..." />
+              <button><i class="fa fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== MAIN JS ===== -->
+    <script src="js/navbar.js"></script>
+
+    <!-- ------footer js  -->
+    <!--   *** Link To JQuery ***   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

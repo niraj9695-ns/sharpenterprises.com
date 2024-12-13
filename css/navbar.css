@@ -1,0 +1,230 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 4.5rem;
+
+  /* Colors */
+  --first-color: #356a35;
+  --first-color-light: #77b377;
+  --dark-color: #0e1026;
+  --white-color: #fbfbfb;
+
+  /* Font */
+  --body-font: "Open Sans", sans-serif;
+  --nav-name-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+
+  /* Z-Index */
+  --z-fixed: 100;
+}
+
+/*===== BASE STYLES =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== HEADER =====*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 1rem;
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex; /* Align children horizontally */
+  align-items: center; /* Vertically align the logo and text */
+  white-space: nowrap;
+  gap: 0.5rem; /* Add spacing between the logo and text */
+}
+
+.header__logo-img {
+  width: 40px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.header__logo-name {
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+/* Navbar Center Links */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav__item .nav__link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+.nav__link.active,
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+/* Right Section Contact Button */
+.header__right {
+  margin-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--first-color-light);
+}
+
+/*===== MOBILE MENU =====*/
+.header__toggle {
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  /* Hamburger Menu */
+  .header__toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--first-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    transition: 0.5s;
+    z-index: var(--z-fixed);
+  }
+
+  .nav.show {
+    left: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav__link {
+    color: var(--white-color);
+    font-size: 1.2rem;
+  }
+
+  /* Contact Button in Sidebar */
+  .nav__link.nav__contact {
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--white-color);
+    color: var(--first-color);
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .header__right {
+    display: none;
+  }
+}
+
+/*===== DESKTOP STYLES =====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .nav__link {
+    color: var(--dark-color);
+  }
+
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
